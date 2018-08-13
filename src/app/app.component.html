@@ -1,0 +1,13 @@
+<div class="navigation col-lg-1">
+	<h1 class="head-title">
+  	{{title}}
+	</h1>
+<nav id="navigationn">
+<router-outlet></router-outlet>
+<a [routerLink]="['/documentos',1]" [routerLinkActive]="['actived']">
+ <button type="button" class="btn btn-info">
+     Document
+  </button>
+</a>
+</nav>
+</div>

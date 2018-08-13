@@ -1,0 +1,50 @@
+<h1>{{titulo}}</h1>
+
+<form #formDocument="ngForm" ngSubmit="onSubmit()" class="col-lg-6">
+
+	<p>
+		<label>Descripcion</label>
+		<textarea  #descripcion="ngModel" name="descripcion" [(ngModel)]="document.descripcion"></textarea>
+		 <span *ngIf="!descripcion.valid && descripcion.touched">El descripcion es obligatoria</span>
+	</p>
+	<p>
+		<label>Tipo</label>
+		<input type="text" #name="ngModel" name="tipo" [(ngModel)]="document.tipo"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+	<p>
+		<label>Ruta</label>
+		<input type="text" #name="ngModel" name="ruta" [(ngModel)]="document.ruta"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+	<p>
+		<label>Estado</label>
+		<input type="text" #name="ngModel" name="estado" [(ngModel)]="document.estado"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+	<p>
+		<label>Autor</label>
+		<input type="text" #name="ngModel" name="autor" [(ngModel)]="document.autor"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+	<p>
+		<label>Editor</label>
+		<input type="text" #name="ngModel" name="editor" [(ngModel)]="document.editor"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+		<p>
+		<label>Revision</label>
+		<input type="text" #name="ngModel" name="revision" [(ngModel)]="document.revision"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+		<p>
+		<label>File</label>
+		<input type="text" #name="ngModel" name="file" [(ngModel)]="document.file"required />
+		 <span *ngIf="!name.valid && name.touched"></span>
+	</p>
+	
+
+	
+	
+	<input type="submit" value="{{titulo}}" [disabled]="!formDocument.form.valid" />
+	</form>
